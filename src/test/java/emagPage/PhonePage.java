@@ -20,6 +20,10 @@ public class PhonePage {
     private WebElement phoneButton;
     @FindBy(how=How.XPATH, using = "//i[@class='em em-cart_fill gtm_680klw']")
     private WebElement cartButton;
+    @FindBy(how = How.XPATH, using = "//a[@class='btn btn-primary btn-sm btn-block']")
+    private WebElement seeCartButton;
+    @FindBy (how = How.XPATH, using = "//a[@class='emg-button emg-btn-large emg-btn-full gtm_sn11312018']")
+    private WebElement goCartButton;
 
     //constructor
 
@@ -33,15 +37,26 @@ public class PhonePage {
     public PhonePage goToSelectPhone()
     {
         function.scrollDownMore(driver);
-//        phoneList.get(3).click();
         phoneButton.click();
         return this;
     }
 
-    public PhonePage goToCartShopping()
+    public PhonePage addToCartShop()
     {
         cartButton.click();
         return this;
+    }
+
+    public PhonePage seeCartShop ()
+    {
+        seeCartButton.click();
+        return this;
+    }
+
+    public CartShop goCartShop ()
+    {
+        goCartButton.click();
+        return new CartShop(driver);
     }
 
 }

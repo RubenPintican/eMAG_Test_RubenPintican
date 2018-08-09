@@ -1,6 +1,8 @@
 package emagTests;
 
-import emagPage.*;
+import emagPage.EmagHomePage;
+import emagPage.LoginPage;
+import emagPage.PersonalDataPage;
 import help.BaseTest;
 import org.junit.Test;
 

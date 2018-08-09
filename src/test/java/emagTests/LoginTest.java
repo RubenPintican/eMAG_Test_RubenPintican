@@ -2,20 +2,16 @@ package emagTests;
 
 import emagPage.EmagHomePage;
 import emagPage.LoginPage;
-import emagPage.PhonePage;
-import emagPage.SearchPage;
 import help.BaseTest;
 import org.junit.Test;
 
-public class AddPhoneToCartTest extends BaseTest {
+public class LoginTest extends BaseTest {
     @Test
 
-    public void fourTest ()
-    {
+    public void secondTest(){
+
         EmagHomePage homePage = new EmagHomePage(driver);
         LoginPage loginPage =new LoginPage(driver);
-        SearchPage searchPage=new SearchPage(driver);
-        PhonePage phonePage = new PhonePage(driver);
 
         homePage.goEmagHomePage();
         homePage.goLoginPage();
@@ -24,10 +20,6 @@ public class AddPhoneToCartTest extends BaseTest {
         loginPage.fillPasswordBox("dinamo2018");
         loginPage.goToHomePage();
         homePage.validateLogInProcess("Salut,Ruben Pintican");
-        searchPage.fillSearchBox("Iphone")
-                .goToPhonePage();
-        phonePage.goToSelectPhone()
-                .goToCartShopping();
-    }
 
+    }
 }
