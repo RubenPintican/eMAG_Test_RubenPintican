@@ -1,6 +1,7 @@
 package emagPage;
 
 import help.HelperMethodes;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +23,8 @@ public class ProductsPage {
     private WebElement seeCartButton;
     @FindBy (how = How.XPATH, using = "//a[@class='emg-button emg-btn-large emg-btn-full gtm_sn11312018']")
     private WebElement goCartButton;
+    @FindBy (how = How.XPATH, using = "//h2[@class='cart-vendor-title']")
+    private WebElement verifyProductInCart;
 
 
     public ProductsPage(WebDriver driver)
@@ -52,6 +55,12 @@ public class ProductsPage {
     public ProductsPage seeCartShop ()
     {
         seeCartButton.click();
+        return this;
+    }
+
+    public ProductsPage verifyProductInCart()
+    {
+        Assert.assertTrue(verifyProductInCart.getText().contains("Produse vandute si livrate de eMAG"));
         return this;
     }
 

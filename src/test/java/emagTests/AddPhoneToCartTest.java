@@ -28,15 +28,16 @@ public class AddPhoneToCartTest extends BaseTest {
         productsPage.goToSelectPhone()
                 .addToCartShop()
                 .seeCartShop()
+                .verifyProductInCart()
                 .goCartShop();
         cartShopPage.clickAllOptions()
                 .clickSelectShowroom()
                 .clikOnBillButton()
                 .fillnameBox("Pop Ionescu")
                 .fillphoneBox("0758456789")
-                .filladdressBox("Siret", "12")
+                .filladdressBox("Oltului", "12")
                 .clickOnSaveButton()
-                .fillMobilePhoneBox("")
+                .clickOnPaymentsButton()
                 .goToFinalPage();
         finalPage.validateCommandProcess("");
 

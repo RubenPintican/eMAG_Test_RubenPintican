@@ -14,7 +14,7 @@ public class AddPhoneToCartNegativeTest extends BaseTest {
         SearchPage searchPage=new SearchPage(driver);
         ProductsPage productsPage = new ProductsPage(driver);
         CartShopPage cartShopPage = new CartShopPage(driver);
-        FinalPage finalPage = new FinalPage(driver);
+
 
         homePage.goEmagHomePage();
         homePage.goLoginPage();
@@ -31,14 +31,8 @@ public class AddPhoneToCartNegativeTest extends BaseTest {
                 .goCartShop();
         cartShopPage.clickAllOptions()
                 .clickSelectShowroom()
-//                .clikOnBillButton()
-                .fillnameBox("Pop Ionescu")
-                .fillphoneBox("0758456789")
-                .filladdressBox("Siret", "12")
-                .clickOnSaveButton()
-                .fillMobilePhoneBox("")
-                .goToFinalPage();
-        finalPage.validateCommandProcess("");
+                .goToFinalPage()
+                .validateCommandProcess("Te rugam selecteaza modalitatea de facturare");
 
 
     }

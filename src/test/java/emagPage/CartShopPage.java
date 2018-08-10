@@ -1,6 +1,7 @@
 package emagPage;
 
 import help.HelperMethodes;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,6 +33,9 @@ public class CartShopPage {
     private WebElement mobilephoneBox;
     @FindBy (how=How.XPATH, using = "//button[@type='submit']")
     private  WebElement submitButton;
+    @FindBy (how = How.XPATH, using = "//span[@class='section-notification']")
+    private WebElement verifyCommandProcess;
+
 
 
     public CartShopPage(WebDriver driver)
@@ -57,6 +61,12 @@ public class CartShopPage {
     {
         functions.selectByValue(selectButton,"5412e183-99c1-11e6-8a27-001a4a1f12fa");
         selectButton.click();
+        return this;
+    }
+
+    public CartShopPage verifyCommandProcess()
+    {
+        Assert.assertTrue(verifyCommandProcess.getText().contains("Te rugam selecteaza modalitatea de facturare"));
         return this;
     }
 

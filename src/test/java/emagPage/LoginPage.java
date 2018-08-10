@@ -1,6 +1,7 @@
 package emagPage;
 
 import help.HelperMethodes;
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +26,8 @@ public class LoginPage {
     private WebElement passwordBox;
     @FindBy (how=How.XPATH,using = "//*[@class='gui-btn auth-btn-primary auth-submit']")
     private WebElement continue2Button;
+    @FindBy (how = How.XPATH, using = "//div[@class='gui-form-control -wide -error']")
+    private WebElement verifyPassword;
 
 
 
@@ -70,6 +73,12 @@ public class LoginPage {
         JavascriptExecutor jse=(JavascriptExecutor)driver;
         jse.executeScript("arguments[0].value='"+password+"';",passwordBox);
        return this;
+    }
+
+    public LoginPage verifyPassword ()
+    {
+        Assert.assertTrue(verifyPassword.getText().contains("Ai introdus gresit parola sau adresa de email. Te rog completeaza din nou."));
+        return this;
     }
 
     // Click on Continue2 Button.

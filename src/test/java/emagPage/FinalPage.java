@@ -29,7 +29,7 @@ public class FinalPage {
         {
             if (actualvalue.contains(message))
             {
-                System.out.println("Toate datele au fost introduse corect, putem plasa comanda!");
+                System.out.println("Toate datele au fost introduse corect, puteti plasa comanda!");
             }
         }
         return this;
