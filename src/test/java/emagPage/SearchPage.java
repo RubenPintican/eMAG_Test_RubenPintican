@@ -24,7 +24,7 @@ public class SearchPage {
 
     // Fill Search Box.
 
-    public SearchPage fillSearchBox (String name)
+    public SearchPage fillsearchBox(String name)
     {
         searchBox.sendKeys(name);
         return this;

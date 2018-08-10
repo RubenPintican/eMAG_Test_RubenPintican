@@ -9,7 +9,7 @@ import org.junit.Test;
 public class PersonalDataTest extends BaseTest {
     @Test
 
-    public void thirdTest ()
+    public void ThirdTest ()
     {
         EmagHomePage homePage = new EmagHomePage(driver);
         LoginPage loginPage =new LoginPage(driver);
@@ -21,14 +21,14 @@ public class PersonalDataTest extends BaseTest {
         loginPage.clickOnContinueButton();
         loginPage.fillPasswordBox("dinamo2018");
         loginPage.goToHomePage();
-        homePage.validateLogInProcess("Ruben Pintican");
+        homePage.validateLoginProcess("Ruben Pintican");
         homePage.goLoginPage();
         dataPage.clickGenderButton()
                 .fillAccountDataPage("Ruben","0756317965")
                 .clickDayButton()
                 .clickMonthButton()
                 .clickYearButton()
-                .clickeducationButton();
+                .clickEducationButton();
 
     }
 }

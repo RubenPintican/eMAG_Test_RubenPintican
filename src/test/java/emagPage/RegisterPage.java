@@ -55,7 +55,7 @@ public class RegisterPage {
 
     //Click on Continue Button.
 
-    public EmagHomePage clickOnContinueButton()
+    public EmagHomePage clickonContinueButton()
     {
         continueButton.click();
         return new EmagHomePage(driver);

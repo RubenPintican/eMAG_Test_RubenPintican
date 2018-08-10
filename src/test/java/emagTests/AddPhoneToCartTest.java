@@ -7,7 +7,7 @@ import org.junit.Test;
 public class AddPhoneToCartTest extends BaseTest {
     @Test
 
-    public void fourTest ()
+    public void FourTest ()
     {
         EmagHomePage homePage = new EmagHomePage(driver);
         LoginPage loginPage =new LoginPage(driver);
@@ -22,8 +22,8 @@ public class AddPhoneToCartTest extends BaseTest {
         loginPage.clickOnContinueButton();
         loginPage.fillPasswordBox("dinamo2018");
         loginPage.goToHomePage();
-        homePage.validateLogInProcess("Salut,Ruben Pintican");
-        searchPage.fillSearchBox("Iphone")
+        homePage.validateLoginProcess("Salut,Ruben Pintican");
+        searchPage.fillsearchBox("Iphone")
                 .goToProductsPage();
         productsPage.goToSelectPhone()
                 .addToCartShop()

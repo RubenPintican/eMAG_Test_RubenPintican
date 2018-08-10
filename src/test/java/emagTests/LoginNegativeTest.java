@@ -8,7 +8,7 @@ import org.junit.Test;
 public class LoginNegativeTest extends BaseTest {
     @Test
 
-    public void fiveTest(){
+    public void FiveTest(){
 
         EmagHomePage homePage = new EmagHomePage(driver);
         LoginPage loginPage =new LoginPage(driver);

@@ -10,7 +10,8 @@ public class RegisterTest extends BaseTest {
 
     @Test
 
-    public void firstTest() {
+    public void FirstTest() {
+
         EmagHomePage homePage = new EmagHomePage(driver);
         LoginPage loginPage =new LoginPage(driver);
         RegisterPage registerPage=new RegisterPage(driver);
@@ -22,7 +23,7 @@ public class RegisterTest extends BaseTest {
         registerPage.fillRegisterPage("Rubenn", "dinamo2018", "dinamo2018")
                     .clickOnAgreeTerms()
                     .clickOnConfirmAgeButton()
-                    .clickOnContinueButton();
+                    .clickonContinueButton();
 
 }
 }

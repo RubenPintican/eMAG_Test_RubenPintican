@@ -52,7 +52,7 @@ public class EmagHomePage {
 
     // Validate the Login process.
 
-    public EmagHomePage validateLogInProcess (String message)
+    public EmagHomePage validateLoginProcess(String message)
     {
         functions.hoverWebElement(myAccountButton,driver);
         String actualvalue = loginmessage.getText();

@@ -80,7 +80,7 @@ public class PersonalDataPage {
 
     }
 
-    public PersonalDataPage clickeducationButton()
+    public PersonalDataPage clickEducationButton()
     {
         functions.selectByValue(educationButton,"4");
         educationButton.click();

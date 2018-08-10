@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class AddPhoneToCartNegativeTest extends BaseTest {
     @Test
-    public void sixTest()
+    public void SixTest()
 
     {
         EmagHomePage homePage = new EmagHomePage(driver);
@@ -22,8 +22,8 @@ public class AddPhoneToCartNegativeTest extends BaseTest {
         loginPage.clickOnContinueButton();
         loginPage.fillPasswordBox("dinamo2018");
         loginPage.goToHomePage();
-        homePage.validateLogInProcess("Salut,Ruben Pintican");
-        searchPage.fillSearchBox("Iphone")
+        homePage.validateLoginProcess("Salut,Ruben Pintican");
+        searchPage.fillsearchBox("Iphone")
                 .goToProductsPage();
         productsPage.goToSelectPhone()
                 .addToCartShop()
