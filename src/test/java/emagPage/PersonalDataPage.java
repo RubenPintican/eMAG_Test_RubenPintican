@@ -34,11 +34,15 @@ public class PersonalDataPage {
         PageFactory.initElements(driver,this);
     }
 
+    // Click on GenderButton.
+
     public PersonalDataPage clickGenderButton ()
     {
         genderButton.click();
         return this;
     }
+
+    // Fill Account Data.
 
     public PersonalDataPage fillAccountDataPage(String nickname ,String mobilephone)
     {
@@ -47,6 +51,8 @@ public class PersonalDataPage {
         return this;
     }
 
+    // Click on Day Button.
+
     public PersonalDataPage clickDayButton ()
     {
         functions.selectByValue(dayButton,"21");
@@ -54,6 +60,8 @@ public class PersonalDataPage {
         return this;
 
     }
+
+    // Click on Month Button.
 
     public PersonalDataPage clickMonthButton()
     {
@@ -67,6 +75,9 @@ public class PersonalDataPage {
         functions.selectByValue(yearButton,"1995");
         yearButton.click();
         return this;
+
+    // Click on Education Button.
+
     }
 
     public PersonalDataPage clickeducationButton()

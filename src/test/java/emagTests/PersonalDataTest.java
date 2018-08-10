@@ -17,7 +17,7 @@ public class PersonalDataTest extends BaseTest {
 
         homePage.goEmagHomePage();
         homePage.goLoginPage();
-        loginPage.fillEmailField("ruben.pintican@yahoo.com");
+        loginPage.fillEmailBox("ruben.pintican@yahoo.com");
         loginPage.clickOnContinueButton();
         loginPage.fillPasswordBox("dinamo2018");
         loginPage.goToHomePage();
@@ -29,10 +29,6 @@ public class PersonalDataTest extends BaseTest {
                 .clickMonthButton()
                 .clickYearButton()
                 .clickeducationButton();
-
-
-
-
 
     }
 }

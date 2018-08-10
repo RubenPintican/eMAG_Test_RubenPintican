@@ -40,13 +40,15 @@ public class LoginPage {
         return new LoginPage(driver);
     }
 
-    //metode
-    public LoginPage fillEmailField(String email)
+    // Methodes
+    // Fill Email Box.
+    public LoginPage fillEmailBox(String email)
     {
         emailTextBox.sendKeys(email);
         return this;
     }
 
+    //Click on Continue Button.
 
     public LoginPage clickOnContinueButton()
     {
@@ -54,10 +56,14 @@ public class LoginPage {
         return this;
     }
 
+    // Wait Explicit.
+
     public void waitExplicit ( WebElement passwordBox, WebDriver driver)
     {
         new WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(passwordBox));
     }
+
+    // Fill password Box.
 
     public LoginPage fillPasswordBox(String password)
     {
@@ -66,6 +72,7 @@ public class LoginPage {
        return this;
     }
 
+    // Click on Continue2 Button.
 
     public EmagHomePage goToHomePage ()
     {

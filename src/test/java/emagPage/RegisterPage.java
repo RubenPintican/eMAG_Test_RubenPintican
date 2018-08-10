@@ -14,7 +14,7 @@ public class RegisterPage {
     @FindBy (how=How.ID, using = "r_password")
     private WebElement passwordBox;
     @FindBy (how=How.ID, using = "r_password_confirmation")
-    private WebElement confrmationPasswordBox;
+    private WebElement confirmPasswordBox;
     @FindBy (how=How.ID,using = "agree_terms")
     private WebElement agreeTermsButton;
     @FindBy (how=How.ID,using = "subsribe_newlsetter")
@@ -28,28 +28,32 @@ public class RegisterPage {
         PageFactory.initElements(driver, this);
     }
 
-    //metoda care completeaza campurile de name, password, confirmPassword.
+    //Set name, password, confirm password, in password text box.
 
     public RegisterPage fillRegisterPage (String name, String password, String confirmationPassword)
     {
         nameBox.sendKeys(name);
         passwordBox.sendKeys(password);
-        confrmationPasswordBox.sendKeys(confirmationPassword);
+        confirmPasswordBox.sendKeys(confirmationPassword);
         return this;
     }
 
-    //metoda care da click pe agreeeTermsButton
+    //Click on Agree Terms.
     public RegisterPage clickOnAgreeTerms()
     {
         agreeTermsButton.click();
         return this;
     }
 
+    //Click on Age Button.
+
     public RegisterPage clickOnConfirmAgeButton()
     {
         confirmAgeButton.click();
         return this;
     }
+
+    //Click on Continue Button.
 
     public EmagHomePage clickOnContinueButton()
     {

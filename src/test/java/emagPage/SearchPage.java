@@ -14,7 +14,7 @@ public class SearchPage {
     @FindBy (how = How.XPATH,using = "//button[@class='btn btn-default searchbox-submit-button']")
     private WebElement searchButton;
 
-    //constructor (initializam driver)
+    //Constructor (initialize driver)
 
     public SearchPage (WebDriver driver)
     {
@@ -22,7 +22,7 @@ public class SearchPage {
         PageFactory.initElements(driver,this);
     }
 
-    //metoda
+    // Fill Search Box.
 
     public SearchPage fillSearchBox (String name)
     {
@@ -30,9 +30,11 @@ public class SearchPage {
         return this;
     }
 
-    public PhonePage goToPhonePage ()
+    // Go Products Page.
+
+    public ProductsPage goToProductsPage()
     {
         searchButton.click();
-        return new PhonePage (driver);
+        return new ProductsPage(driver);
     }
 }

@@ -4,10 +4,10 @@ import emagPage.*;
 import help.BaseTest;
 import org.junit.Test;
 
-public class AddPhoneToCartTest extends BaseTest {
+public class AddPhoneToCartNegativeTest extends BaseTest {
     @Test
+    public void sixTest()
 
-    public void fourTest ()
     {
         EmagHomePage homePage = new EmagHomePage(driver);
         LoginPage loginPage =new LoginPage(driver);
@@ -31,7 +31,7 @@ public class AddPhoneToCartTest extends BaseTest {
                 .goCartShop();
         cartShopPage.clickAllOptions()
                 .clickSelectShowroom()
-                .clikOnBillButton()
+//                .clikOnBillButton()
                 .fillnameBox("Pop Ionescu")
                 .fillphoneBox("0758456789")
                 .filladdressBox("Siret", "12")
@@ -42,5 +42,4 @@ public class AddPhoneToCartTest extends BaseTest {
 
 
     }
-
 }

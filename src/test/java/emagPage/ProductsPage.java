@@ -7,16 +7,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
-
-public class PhonePage {
+public class ProductsPage {
     WebDriver driver;
     HelperMethodes function = new HelperMethodes(driver);
 
 
 //    @FindBy (how=How.XPATH,using = "//*[@id='restList']/div[@class='list']/div")
 //    private List<WebElement> phoneList;
-    @FindBy(how = How.XPATH, using = "//a[@title='Telefon mobil Apple iPhone 6, 32GB, Space Gray']")
+    @FindBy(how = How.XPATH, using = "//a[@title='Telefon mobil Apple iPhone X, 64GB, 4G, Space Grey']")
     private WebElement phoneButton;
     @FindBy(how=How.XPATH, using = "//i[@class='em em-cart_fill gtm_680klw']")
     private WebElement cartButton;
@@ -25,38 +23,47 @@ public class PhonePage {
     @FindBy (how = How.XPATH, using = "//a[@class='emg-button emg-btn-large emg-btn-full gtm_sn11312018']")
     private WebElement goCartButton;
 
-    //constructor
 
-    public PhonePage (WebDriver driver)
+    public ProductsPage(WebDriver driver)
     {
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }
 
-    //metoda
-    public PhonePage goToSelectPhone()
+    // Go to Select Phone.
+
+    public ProductsPage goToSelectPhone()
     {
         function.scrollDownMore(driver);
         phoneButton.click();
         return this;
     }
 
-    public PhonePage addToCartShop()
+    // Add to Cart Shop.
+
+    public ProductsPage addToCartShop()
     {
         cartButton.click();
         return this;
     }
 
-    public PhonePage seeCartShop ()
+    // See Cart Shop.
+
+    public ProductsPage seeCartShop ()
     {
         seeCartButton.click();
         return this;
     }
 
-    public CartShop goCartShop ()
+    // Go to Cart Shop.
+
+    public CartShopPage goCartShop ()
     {
         goCartButton.click();
-        return new CartShop(driver);
+        return new CartShopPage(driver);
     }
+
+
+
 
 }

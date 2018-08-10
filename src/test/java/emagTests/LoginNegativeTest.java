@@ -15,9 +15,9 @@ public class LoginNegativeTest extends BaseTest {
 
         homePage.goEmagHomePage();
         homePage.goLoginPage();
-        loginPage.fillEmailField("ruben.pintican@yahoo.com");
+        loginPage.fillEmailBox("ruben.pintican@yahoo.com");
         loginPage.clickOnContinueButton();
-        loginPage.fillPasswordBox("dinamo2017");
+        loginPage.fillPasswordBox("fcsb2018");
         loginPage.goToHomePage();
         homePage.validateLogInProcess("Ruben Pintican");
 

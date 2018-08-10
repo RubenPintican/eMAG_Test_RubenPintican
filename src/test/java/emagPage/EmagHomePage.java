@@ -10,9 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class EmagHomePage {
 
-           WebDriver driver;
+    WebDriver driver;
 
-           public HelperMethodes functions = new HelperMethodes(driver);
+    public HelperMethodes functions = new HelperMethodes(driver);
 
 
     @FindBy(how = How.ID, using = "my_account")
@@ -27,10 +27,12 @@ public class EmagHomePage {
     public EmagHomePage (WebDriver driver)
     {
         this.driver= driver;
+        //This initElements method will create all WebElements
         PageFactory.initElements(driver,this);
     }
 
-    // metoda
+    // Get the title of Home Page.
+
     public EmagHomePage goEmagHomePage()
     {
         String actualTitle = driver.getTitle();
@@ -41,11 +43,15 @@ public class EmagHomePage {
         return this;
     }
 
+    // Click on Login Page.
+
     public LoginPage goLoginPage() {
         myAccountButton.click();
         return new LoginPage(driver);
     }
-    // validate the login process
+
+    // Validate the Login process.
+
     public EmagHomePage validateLogInProcess (String message)
     {
         functions.hoverWebElement(myAccountButton,driver);

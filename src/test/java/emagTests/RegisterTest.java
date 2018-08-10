@@ -17,7 +17,7 @@ public class RegisterTest extends BaseTest {
 
         homePage.goEmagHomePage();
         homePage.goLoginPage();
-        loginPage.fillEmailField("ru.pintican@yahoo.com")
+        loginPage.fillEmailBox("ru.pintican@yahoo.com")
                     .clickOnContinueButton();
         registerPage.fillRegisterPage("Rubenn", "dinamo2018", "dinamo2018")
                     .clickOnAgreeTerms()
